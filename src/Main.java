@@ -5,23 +5,23 @@ public class Main {
         String negativeMsg;
         double num = Math.random();
         int randomNum = (int) (1 + num * (5 - 1));
-        int chances = 2;
-        int chute;
+        int attempts = 2;
+        int userAttempt;
 
         do {
-            System.out.println("Chances: " + chances);
-            System.out.print("Adivinhe o valor entre 1 e 5: ");
-            chute = scan.nextInt();
-            if (chute == randomNum) {
-                System.out.print("Você acertou!");
+            System.out.println("Attempts: " + attempts);
+            System.out.print("Guess a number between 1 and 5: ");
+            userAttempt = scan.nextInt();
+            if (userAttempt == randomNum) {
+                System.out.print("You win!");
                 System.exit(0);
             } else {
-                --chances;
+                --attempts;
                 System.out.println("--------------------------------");
-                negativeMsg = (chances != 0) ? "Tente novamente!" : "Você perdeu!";
+                negativeMsg = (attempts != 0) ? "Try again!" : "You lose!";
                 System.out.println(negativeMsg);
             }
         }
-        while (chances > 0);
+        while (attempts > 0);
     }
 }
