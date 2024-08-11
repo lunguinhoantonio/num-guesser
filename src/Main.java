@@ -18,7 +18,7 @@ public class Main {
             } else {
                 --attempts;
                 System.out.println("--------------------------------");
-                negativeMsg = (attempts != 0) ? "Try again!" : "You lose!";
+                negativeMsg = (attempts != 0) ? "Try again!" : "You lose! \nThe correct number was " + randomNum;
                 System.out.println(negativeMsg);
             }
         }
